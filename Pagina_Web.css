@@ -1,0 +1,210 @@
+/* Variables para mantener los colores consistentes */
+:root {
+    --color-primario: #0A2540; 
+    --color-acento: #00D4FF; 
+    --color-texto: #333333;
+    --fondo-gris: #F6F9FC;
+    --blanco: #FFFFFF;
+}
+
+/* Reseteo básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.seccion {
+    padding: 80px 0;
+}
+
+.titulo-centrado {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 40px;
+}
+
+.fondo-suave {
+    background-color: var(--fondo-gris);
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco);
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: 600;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--color-acento);
+}
+
+.btn-nav {
+    background-color: var(--color-primario);
+    color: var(--blanco) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* --- Sección Imagen de fondo --- */
+.hero {
+    background-image: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('https://tse1.mm.bing.net/th/id/OIP.2kGEZUq458KqQjHuSungUQHaDt?rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero-texto h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* --- Botones --- */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-primario);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-principal:hover {
+    background-color: #00b8e6;
+    transform: translateY(-3px);
+}
+
+.ancho-completo {
+    width: 100%;
+}
+
+/* --- Nosotros --- */
+.nosotros-grid {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nosotros-info, .imagen-redondeada {
+    flex: 1; 
+}
+
+.imagen-redondeada {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Servicios --- */
+.servicios-contenedor {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.tarjeta {
+    background: var(--blanco);
+    padding: 40px 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.icono {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* --- Formulario --- */
+.formulario-contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--fondo-gris);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--color-primario);
+}
+
+.grupo-input input, .grupo-input textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.mensaje-oculto {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- Pie de Página --- */
+footer {
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+}
